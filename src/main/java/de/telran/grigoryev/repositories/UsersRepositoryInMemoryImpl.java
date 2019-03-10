@@ -25,6 +25,10 @@ public class UsersRepositoryInMemoryImpl implements UserRepository {
     }
 
 
+    public void save(User user){
+        users.add(user);
+    }
+
     @Override
     public List<User> findAll() {
         return this.users;
