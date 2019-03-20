@@ -12,17 +12,20 @@ import java.io.IOException;
 
 public class HomeServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-                 req
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        req
                 .getServletContext()
-                .getRequestDispatcher("/WEB-INF/jsp/home.jsp;")
-                .forward(req,resp);
+                .getRequestDispatcher("/WEB-INF/jsp/home.jsp")
+                .forward(req, resp);
     }
 
-   @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         String color = req.getParameter("color");
-        Cookie colorCookie = new Cookie("color",color);
+        Cookie colorCookie = new Cookie("color", color);
         resp.addCookie(colorCookie);
+        resp.sendRedirect(req.getContextPath() + "/home");
     }
 }

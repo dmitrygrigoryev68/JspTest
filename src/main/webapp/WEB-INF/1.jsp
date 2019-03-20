@@ -16,7 +16,7 @@ JSPTest
 
 <table>
     <tr>
-        <th>User lknlkbnname</th>
+        <th>Username</th>
         <th>Birth date</th>
     </tr>
     <%
@@ -31,4 +31,4 @@ JSPTest
     <%}%>
 </table>
 </body>
-</html
+</html>
