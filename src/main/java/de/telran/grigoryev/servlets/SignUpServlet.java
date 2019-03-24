@@ -30,7 +30,7 @@ public class SignUpServlet extends HttpServlet {
 
         List<User> users = userRepository.findAll();
         req.setAttribute("usersFromServer",users);
-        RequestDispatcher dispatcher = req.getServletContext().getRequestDispatcher("/WEB-INF/jsp/signUp.jsp");
+        RequestDispatcher dispatcher = req.getServletContext().getRequestDispatcher("/jsp/signUp.jsp");
         dispatcher.forward(req, resp);
     }
 

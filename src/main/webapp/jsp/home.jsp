@@ -7,7 +7,9 @@
     <title>JSPTest</title>
 </head>
 <body>
+<h1>
 <span style="color: ${cookie.color.value}">Hello</span>
+</h1>
 <form method="post" action="/home">
     <label for="color">
         <select name="color" id="color">
